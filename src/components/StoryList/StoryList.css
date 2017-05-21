@@ -4,3 +4,15 @@
     padding: 1% 1.15%;
     text-align: left;
 }
+
+ol {
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+li {
+    position: relative;
+    padding: 20px;
+    border-bottom: #eee solid 1px;
+}
