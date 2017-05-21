@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import { receiveTopStories } from '../actions/index'
 
-const storyList = (state = [], action) => {
+export const storyList = (state = [], action) => {
 	switch (action.type) {
 		case 'RECEIVE_TOP_STORIES':
 			return action.storyList;
@@ -9,6 +9,11 @@ const storyList = (state = [], action) => {
 			return state;
 	}
 };
-
-export default storyList;
-
+export const lifeTimeTopStory = (state = {}, action) => {
+	switch (action.type) {
+		case 'RECEIVE_LIFETIME_TOP_STORY':
+			return action.topStory;
+		default:
+			return state;
+	}
+};

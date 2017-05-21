@@ -16,13 +16,14 @@ class StoryListView extends React.Component {
 		return (
 			<ol className="list">
 				{storyList !== undefined && storyList.map(story =>
-					<Story key={story.id}
+					<li><Story key={story.id}
 						   title={story.title}
 						   score={story.score}
 						   descendants={story.descendants}
 						   url={story.url}
 						   by={story.by}
 						   lifetime={story.lifetime} />
+					</li>
 				)
 				}
 			</ol>

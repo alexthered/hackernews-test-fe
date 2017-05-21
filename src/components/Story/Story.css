@@ -20,6 +20,11 @@
 }
 
 .story-status {
-    font-size: 10pt;
-    color: #828282
+    font-size: 12px;
+    color: #828282;
+    line-height: 1.5;
+}
+
+.author {
+    color: #5AA3E8
 }

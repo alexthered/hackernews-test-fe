@@ -1,22 +1,22 @@
 import React from 'react';
 import './Button.css'
 import { connect } from 'react-redux'
-import { fetchTopStories } from  '../../actions/index'
+import { refreshData } from  '../../actions/index'
 
 class ButtonView extends React.Component {
 	render() {
-		const refreshStoryList = this.props.refreshStoryList;
+		const refreshData = this.props.refreshData;
 
 		return (
-			<button className="button" onClick={refreshStoryList}>Refresh</button>
+			<button className="button" onClick={refreshData}>Refresh</button>
 		);
 	}
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		refreshStoryList: () => {
-			fetchTopStories(dispatch);
+		refreshData: () => {
+			refreshData(dispatch);
 		}
 	}
 };

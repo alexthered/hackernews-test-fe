@@ -1,13 +1,20 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import storyList from './reducers/index'
+import { storyList, lifeTimeTopStory } from './reducers/index'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk';
+
+const initialState = {
+	storyList: [],
+	lifeTimeStopStory: {}
+};
 
 const configureStore = () => {
 
 	const store = createStore(combineReducers({
-			storyList
+			storyList,
+			lifeTimeTopStory
 		}),
+		initialState,
 		applyMiddleware(logger)
 	);
 
