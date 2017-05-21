@@ -1,21 +1,15 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import StoryList from './components/StoryList/StoryList'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+import React from 'react'
+
+let App = React.createClass({
+    render() {
+        return <div className="App">
+            <p className="section-header">Current top 10 stories: </p>
+            <StoryList />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+    }
+})
 
-export default App;
+export default App
