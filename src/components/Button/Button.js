@@ -1,5 +1,5 @@
 import React from 'react';
-//import styles from './Button.css'
+import './Button.css'
 import { connect } from 'react-redux'
 import { fetchTopStories } from  '../../actions/index'
 
@@ -8,7 +8,7 @@ class ButtonView extends React.Component {
 		const refreshStoryList = this.props.refreshStoryList;
 
 		return (
-			<button onClick={refreshStoryList}>Refresh</button>
+			<button className="button" onClick={refreshStoryList}>Refresh</button>
 		);
 	}
 };

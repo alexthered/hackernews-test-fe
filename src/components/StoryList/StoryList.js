@@ -2,7 +2,7 @@ import React from 'react';
 import Story from '../Story/Story.js'
 import { fetchTopStories } from  '../../actions/index'
 import { connect } from 'react-redux'
-import styles from './StoryList.css'
+import './StoryList.css'
 
 class StoryListView extends React.Component {
 
@@ -14,7 +14,7 @@ class StoryListView extends React.Component {
 		const storyList = this.props.storyList;
 
 		return (
-			<ol className={styles.lists}>
+			<ol className="list">
 				{storyList !== undefined && storyList.map(story =>
 					<Story key={story.id}
 						   title={story.title}
