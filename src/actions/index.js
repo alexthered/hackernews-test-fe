@@ -6,7 +6,6 @@ export const receiveTopStories = (storyList) => {
 };
 
 export const fetchTopStories = (dispatch) => {
-	//fetch('http://localhost:3000/v1/stories')
 	fetch('https://hackernews-test-api.herokuapp.com/v1/stories')
 		.then((response) => {
 			console.log(response);
